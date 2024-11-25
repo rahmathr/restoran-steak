@@ -1,14 +1,12 @@
 import pandas as pd
 import menu_steak,menu_minuman
-
 global daftar_menu,daf,daftar_jumlah,daftar_harga,daftar_total_harga
-
 daftar_menu = []
 daftar_jumlah = []
 daftar_harga = []
 daftar_total_harga = []
-
-def main():
+# Dijalankan sebagai program utama
+if __name__ == "__main__":
     while True:
         print("==================================")
         print("\tRESTORAN STEAK 🥩")
@@ -28,7 +26,7 @@ def main():
             elif pilihan_menu == 2:
                 menu_minuman.tampilkan_menu_minuman(daftar_menu,daftar_harga,daftar_jumlah,daftar_total_harga)
             else:
-                print("Pilihan menu tidak valid. Silakan pilih antara 1, 2, 3, atau 4.")
+                print("\nPilihan menu tidak valid. Silakan pilih antara 1, 2, 3, atau 4.")
         elif pilihan_opsi == 2:
             data = {
                 "NamaMenu": daftar_menu,
@@ -40,20 +38,18 @@ def main():
             print("\n==================== PESANAN ANDA ====================\n")
             print(tabel_data)
             print("\n======================================================")
+            # Hitung Total Bayar sebelum dikenakan ppn
             total = 0
             for total_bayar in daftar_total_harga:
                 total += total_bayar
-            print(f"JumlahBayar \t\t : Rp{total}")
-            # Menghitung pajak
+            print(f"Jumlah Bayar \t\t : Rp{total}")
+            # Hitung ppn
             pajak = total*(12/100)
-            print(f"Pajak 12%\t\t : Rp{int(pajak)}")
-            # Menghitung total keseluruhan
+            print(f"PPN 12%\t\t\t : Rp{int(pajak)}")
+            # Hitung total keseluruhan
             total_bayar = total + pajak
             print(f"Total yang harus dibayar : Rp{int(total_bayar)}")
             print()
             break
         else:
-            print("Opsi tidak valid. Silakan pilih 1 untuk MENU atau 2 untuk PESANAN ANDA.")
-
-if __name__ == "__main__":
-    main()
+            print("\nOpsi tidak valid. Silakan pilih 1 untuk MENU atau 2 untuk PESANAN ANDA.")

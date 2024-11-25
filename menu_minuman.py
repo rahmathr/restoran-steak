@@ -1,4 +1,3 @@
-# menu_minuman.py
 def tampilkan_menu_minuman(daftar_menu, daftar_jumlah, daftar_harga, daftar_total_harga):
     """
     Menampilkan menu minuman dan mencatat pesanan.
@@ -15,8 +14,8 @@ def tampilkan_menu_minuman(daftar_menu, daftar_jumlah, daftar_harga, daftar_tota
     print("5. Hot Coffee\t\t| Rp12.000")
     print("6. Hot Chocolate\t| Rp20.000")
     jumlah_jenis_minuman = int(input("\nMasukkan jumlah jenis minuman yang ingin Anda pesan: "))
-    for i in range(jumlah_jenis_minuman):
-        print(f"\nJenis ke-{i+1}") 
+    for angka in range(jumlah_jenis_minuman):
+        print(f"\nJenis ke-{angka+1}")
         pilihan_minuman = int(input("Masukkan nomor pilihan minuman (1/2/3/4/5/6): "))
         jumlah_pesanan = int(input("Masukkan jumlah pesanan untuk pilihan ini: "))
         daftar_jumlah.append(jumlah_pesanan)
@@ -45,4 +44,4 @@ def tampilkan_menu_minuman(daftar_menu, daftar_jumlah, daftar_harga, daftar_tota
             daftar_harga.append(20000)
             daftar_total_harga.append(jumlah_pesanan * 20000)
         else:
-            print("Pilihan minuman tidak valid. Silakan pilih antara 1-6.")
+            print("\nPilihan minuman tidak valid. Silakan pilih antara 1-6.")
