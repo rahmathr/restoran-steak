@@ -1,6 +1,6 @@
 import pandas as pd
 import menu_steak,menu_minuman
-global daftar_menu,daf,daftar_jumlah,daftar_harga,daftar_total_harga
+global daftar_menu,daftar_jumlah,daftar_harga,daftar_total_harga
 daftar_menu = []
 daftar_jumlah = []
 daftar_harga = []
