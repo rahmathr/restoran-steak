@@ -8,7 +8,7 @@ daftar_total_harga = []
 # Dijalankan sebagai program utama
 if __name__ == "__main__":
     while True:
-        print("==================================")
+        print("\n==================================")
         print("\tRESTORAN STEAK 🥩")
         print("==================================")
         print("1. LIHAT MENU")
@@ -20,7 +20,7 @@ if __name__ == "__main__":
             print("=====================")
             print("1. STEAK")
             print("2. MINUMAN")
-            pilihan_menu = int(input("\nPilih menu (1/2/3/4): "))
+            pilihan_menu = int(input("\nPilih menu (1/2): "))
             if pilihan_menu == 1:
                 menu_steak.tampilkan_menu_steak(daftar_menu,daftar_harga,daftar_jumlah,daftar_total_harga)
             elif pilihan_menu == 2:
