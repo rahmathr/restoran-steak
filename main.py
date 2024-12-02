@@ -44,18 +44,18 @@ while True:
         total = 0
         for total_bayar in daftar_total_harga:
             total += total_bayar
-        print(f"Total Harga\t= Rp{total}")
+        print(f"Total Harga\t   = Rp{total}")
         # Hitung ppn
         pajak = total*(12/100)
-        print(f"PPN 12%\t\t= Rp{int(pajak)}")
+        print(f"PPN 12%\t\t   = Rp{int(pajak)}")
         # Hitung total keseluruhan
         total_bayar = total + pajak
-        print(f"Total Bayar\t= Rp{int(total_bayar)}")
+        print(f"Total Bayar\t   = Rp{int(total_bayar)}")
         print()
         # Hitung uang pelanggan
-        uang_pelanggan = int(input("masukkan uang anda : "))
+        uang_pelanggan = int(input("masukkan uang anda = Rp"))
         kembalian = uang_pelanggan - total_bayar
-        print(f"total kembalian\t= Rp{int(kembalian)}")
+        print(f"total kembalian\t   = Rp{int(kembalian)}")
         break
     elif pilihan_opsi == 3:
         print("\nSelamat datang kembali 🙏")
