@@ -12,7 +12,7 @@ while True:
     print("| [2] Pesanan Anda\t\t|")
     print("| [3] Exit\t\t\t|")
     print("+===============================+")
-    pilihan_opsi = int(input("Pilih opsi (1/2): "))
+    pilihan_opsi = int(input("Pilih opsi (1/2/3): "))
     if pilihan_opsi == 1:
         print("\n+=======================+")
         print("|\tMENU 📃\t\t|")
@@ -52,6 +52,10 @@ while True:
         total_bayar = total + pajak
         print(f"Total Bayar\t= Rp{int(total_bayar)}")
         print()
+        # Hitung uang pelanggan
+        uang_pelanggan = int(input("masukkan uang anda : "))
+        kembalian = uang_pelanggan - total_bayar
+        print(f"total kembalian\t= Rp{int(kembalian)}")
         break
     elif pilihan_opsi == 3:
         print("\nSelamat datang kembali 🙏")
