@@ -26,7 +26,7 @@ while True:
         elif pilihan_menu == 2:
             menu_minuman.tampilkan_menu_minuman(daftar_menu,daftar_harga,daftar_jumlah,daftar_total_harga)
         else:
-            print("\nPilihan menu tidak valid. Silakan pilih antara 1, 2, 3, atau 4.")
+            print("\nPilihan menu tidak valid. Silakan pilih 1 untuk Steak atau 2 untuk Minuman.")
     elif pilihan_opsi == 2:
         data = {
             "NamaMenu": daftar_menu,
@@ -61,4 +61,4 @@ while True:
         print("\nSelamat datang kembali 🙏")
         break
     else:
-        print("\nOpsi tidak valid. Silakan pilih 1 untuk MENU atau 2 untuk PESANAN ANDA.")
+        print("\nOpsi tidak valid. Silakan pilih 1 untuk Lihat Menu, 2 untuk Pesanan Anda, atau 3 untuk keluar.")
