@@ -22,16 +22,16 @@ while True:
         print("+=======================+")
         pilihan_menu = int(input("Pilih menu (1/2): "))
         if pilihan_menu == 1:
-            menu_steak.tampilkan_menu_steak(daftar_menu,daftar_harga,daftar_jumlah,daftar_total_harga)
+            menu_steak.tampilkan_menu_steak(daftar_menu=daftar_menu, daftar_jumlah=daftar_jumlah,daftar_harga=daftar_harga,daftar_total_harga=daftar_total_harga)
         elif pilihan_menu == 2:
-            menu_minuman.tampilkan_menu_minuman(daftar_menu,daftar_harga,daftar_jumlah,daftar_total_harga)
+            menu_minuman.tampilkan_menu_minuman(daftar_menu=daftar_menu,daftar_jumlah=daftar_jumlah,daftar_harga=daftar_harga,daftar_total_harga=daftar_total_harga)
         else:
             print("\nPilihan menu tidak valid. Silakan pilih 1 untuk Steak atau 2 untuk Minuman.")
     elif pilihan_opsi == 2:
         data = {
             "NamaMenu": daftar_menu,
+            "JumlahBeli": daftar_jumlah,
             "HargaSatuan": daftar_harga,
-            "Jumlah": daftar_jumlah,
             "TotalHarga": daftar_total_harga
         }
         tabel_data = pd.DataFrame(data)
