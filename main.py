@@ -50,8 +50,7 @@ while True:
         print(f"PPN 12%\t\t   = Rp{int(pajak)}")
         # Hitung total keseluruhan
         total_bayar = total + pajak
-        print(f"Total Bayar\t   = Rp{int(total_bayar)}")
-        print()
+        print(f"Total Bayar\t   = Rp{int(total_bayar)}\n")
         # Hitung uang pelanggan
         uang_pelanggan = int(input("masukkan uang anda = Rp"))
         kembalian = uang_pelanggan - total_bayar
